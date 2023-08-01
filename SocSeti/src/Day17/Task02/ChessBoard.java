@@ -13,7 +13,7 @@ public class ChessBoard {
             for (ChessPiece chessPiece : chessPieces) {
                 System.out.print(chessPiece);
             }
-
+            System.out.println();
         }
     }
 }
