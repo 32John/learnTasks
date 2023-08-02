@@ -9,6 +9,7 @@ public class Main {
        if (counter == 1) {
            return arr[0];
        }
+
      return arr[counter - 1] + recursionSum(arr, counter - 1) ;
     }
 }
