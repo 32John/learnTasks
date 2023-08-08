@@ -1,20 +1,20 @@
 package SeaBattle;
 
 public enum Cell {
-    EMPTY(" ■ "),
+    EMPTY(" \u2587 "),
     HALO("□"),
-    SHIP("\uD83D\uDEE5"),  // символ корабля(юникод)
+    SHIP(" \uD83D\uDEE5"),  // символ корабля(юникод)
     PADDED_CELL("✖"),   // подбитая ячейка
     BEGINNING(" "),
-    X1("  X1"),
-    X2("X2"),
-    X3("X3"),
-    X4("X4"),
-    X5("X5"),
-    X6("X6"),
-    X7("X7"),
-    X8("X8"),
-    X9("X9"),
+    X1("  X1 "),
+    X2("X2 "),
+    X3("X3 "),
+    X4("X4 "),
+    X5("X5 "),
+    X6("X6 "),
+    X7("X7 "),
+    X8("X8 "),
+    X9("X9 "),
     X10("X10"),
     Y1("Y1 "),
     Y2("Y2 "),
@@ -39,6 +39,6 @@ public enum Cell {
     }
     @Override
     public String toString() {
-        return symbol;
+        return getSymbol();
     }
 }
