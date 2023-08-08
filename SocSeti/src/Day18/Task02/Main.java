@@ -1,5 +1,7 @@
 package Day18.Task02;
 
+import java.util.ArrayList;
+
 public class Main {
     public static void main(String[] args) {
         int number = 575770797;
