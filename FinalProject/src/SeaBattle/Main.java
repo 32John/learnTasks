@@ -23,11 +23,8 @@ public class Main {
 
         playingField1.print();
         System.out.println();
-//        playingField1.ship4(cell);
+ //       PlayingField.ship3(cell);
         playingField1.allShips(cell);
-
         playingField1.print();
-
     }
-
 }

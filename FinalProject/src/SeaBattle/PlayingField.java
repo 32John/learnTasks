@@ -2,6 +2,7 @@ package SeaBattle;
 
 import java.util.Scanner;
 import static SeaBattle.Cell.*;
+import static SeaBattle.Messages.*;
 
 public class PlayingField {
     private Cell[][] playingField;
@@ -20,56 +21,68 @@ public class PlayingField {
     public static Cell[][] ship4(Cell[][] cells){
         Scanner scanner = new Scanner(System.in);
         String str = scanner.nextLine();
-        int x = 0;
-        int y = 0;
         String[] arr1 = str.split(";");
         for (String arr: arr1){
             String[] arr2 = arr.split(",");
-            x = Integer.parseInt(arr2[0]);
-            y = Integer.parseInt(arr2[1]);
-            cells[y][x] = SHIP;
+            int x = Integer.parseInt(arr2[0]);
+            int y = Integer.parseInt(arr2[1]);
+            if((x > 10 || x < 1) || (y > 10 || y < 1)) {
+                System.out.println("Не корректные координаты! Введите координаты заново");
+                ship4(cells);
+            } else {
+                cells[y][x] = SHIP;
+            }
         }
         return cells;
     }
     public static Cell[][] ship3(Cell[][] cells){
         Scanner scanner = new Scanner(System.in);
         String str = scanner.nextLine();
-        int x = 0;
-        int y = 0;
         String[] arr1 = str.split(";");
         for (String arr: arr1){
             String[] arr2 = arr.split(",");
-            x = Integer.parseInt(arr2[0]);
-            y = Integer.parseInt(arr2[1]);
-            cells[y][x] = SHIP;
+            int x = Integer.parseInt(arr2[0]);
+            int y = Integer.parseInt(arr2[1]);
+            if((x > 10 || x < 1) || (y > 10 || y < 1)) {
+                System.out.println("Не корректные координаты! Введите координаты заново");
+                ship3(cells);
+            } else {
+                cells[y][x] = SHIP;
+            }
         }
         return cells;
     }
     public static Cell[][] ship2(Cell[][] cells){
         Scanner scanner = new Scanner(System.in);
         String str = scanner.nextLine();
-        int x = 0;
-        int y = 0;
         String[] arr1 = str.split(";");
         for (String arr: arr1){
             String[] arr2 = arr.split(",");
-            x = Integer.parseInt(arr2[0]);
-            y = Integer.parseInt(arr2[1]);
+            int x = Integer.parseInt(arr2[0]);
+            int y = Integer.parseInt(arr2[1]);
+            if((x > 10 || x < 1) || (y > 10 || y < 1)) {
             cells[y][x] = SHIP;
+            } else {
+                System.out.println("Не корректные координаты! Введите координаты занова");
+                ship2(cells);
+            }
         }
         return cells;
     }
     public static Cell[][] ship1(Cell[][] cells){
         Scanner scanner = new Scanner(System.in);
         String str = scanner.nextLine();
-        int x = 0;
-        int y = 0;
         String[] arr1 = str.split(";");
         for (String arr: arr1){
             String[] arr2 = arr.split(",");
-            x = Integer.parseInt(arr2[0]);
-            y = Integer.parseInt(arr2[1]);
-            cells[y][x] = SHIP;
+            int x = Integer.parseInt(arr2[0]);
+            int y = Integer.parseInt(arr2[1]);
+            if((x > 10 || x < 1) || (y > 10 || y < 1)) {
+                System.out.println("Не корректные координаты! Введите координаты заново");
+                ship1(cells);
+            } else {
+                cells[y][x] = SHIP;
+            }
         }
         return cells;
     }
