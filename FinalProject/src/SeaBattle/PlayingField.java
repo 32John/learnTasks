@@ -18,71 +18,104 @@ public class PlayingField {
             System.out.println();
         }
     }
-    public static Cell[][] ship4(Cell[][] cells){
-        Scanner scanner = new Scanner(System.in);
-        String str = scanner.nextLine();
-        String[] arr1 = str.split(";");
-        for (String arr: arr1){
-            String[] arr2 = arr.split(",");
-            int x = Integer.parseInt(arr2[0]);
-            int y = Integer.parseInt(arr2[1]);
-            if((x > 10 || x < 1) || (y > 10 || y < 1)) {
-                System.out.println("Не корректные координаты! Введите координаты заново");
-                ship4(cells);
-            } else {
-                cells[y][x] = SHIP;
+    public static Cell[][] ship4(Cell[][] cells) {
+        try {
+            Scanner scanner = new Scanner(System.in);
+            String str = scanner.nextLine();
+            String[] arr1 = str.split(";");
+            for (String arr : arr1) {
+                String[] arr2 = arr.split(",");
+                int x = Integer.parseInt(arr2[0]);
+                int y = Integer.parseInt(arr2[1]);
+                if ((x != (int) x) || (y != (int) y)){
+                    throw new NumberFormatException();
+                }
+                if ((x > 10 || x < 1) || (y > 10 || y < 1)) {
+                    System.out.println("Не корректные координаты! Введите координаты заново");
+                    ship4(cells);
+                } else {
+                    cells[y][x] = SHIP;
+                }
             }
+        } catch (NumberFormatException e) {
+            System.out.println("Введённый символ не являеся числом! введите координаты как указано в шаблоне");
+            ship4(cells);
         }
         return cells;
+
     }
     public static Cell[][] ship3(Cell[][] cells){
-        Scanner scanner = new Scanner(System.in);
-        String str = scanner.nextLine();
-        String[] arr1 = str.split(";");
-        for (String arr: arr1){
-            String[] arr2 = arr.split(",");
-            int x = Integer.parseInt(arr2[0]);
-            int y = Integer.parseInt(arr2[1]);
-            if((x > 10 || x < 1) || (y > 10 || y < 1)) {
-                System.out.println("Не корректные координаты! Введите координаты заново");
-                ship3(cells);
-            } else {
-                cells[y][x] = SHIP;
+        try {
+            Scanner scanner = new Scanner(System.in);
+            String str = scanner.nextLine();
+            String[] arr1 = str.split(";");
+            for (String arr : arr1) {
+                String[] arr2 = arr.split(",");
+                int x = Integer.parseInt(arr2[0]);
+                int y = Integer.parseInt(arr2[1]);
+                if ((x != (int) x) || (y != (int) y)) {
+                    throw new NumberFormatException();
+                }
+                if ((x > 10 || x < 1) || (y > 10 || y < 1)) {
+                    System.out.println("Не корректные координаты! Введите координаты заново");
+                    ship3(cells);
+                } else {
+                    cells[y][x] = SHIP;
+                }
             }
+        }catch (NumberFormatException e) {
+            System.out.println("Введённый символ не являеся числом! введите координаты как указано в шаблоне");
+            ship3(cells);
         }
         return cells;
     }
     public static Cell[][] ship2(Cell[][] cells){
-        Scanner scanner = new Scanner(System.in);
-        String str = scanner.nextLine();
-        String[] arr1 = str.split(";");
-        for (String arr: arr1){
-            String[] arr2 = arr.split(",");
-            int x = Integer.parseInt(arr2[0]);
-            int y = Integer.parseInt(arr2[1]);
-            if((x > 10 || x < 1) || (y > 10 || y < 1)) {
-            cells[y][x] = SHIP;
-            } else {
-                System.out.println("Не корректные координаты! Введите координаты занова");
-                ship2(cells);
+        try {
+            Scanner scanner = new Scanner(System.in);
+            String str = scanner.nextLine();
+            String[] arr1 = str.split(";");
+            for (String arr : arr1) {
+                String[] arr2 = arr.split(",");
+                int x = Integer.parseInt(arr2[0]);
+                int y = Integer.parseInt(arr2[1]);
+                if ((x != (int) x) || (y != (int) y)) {
+                    throw new NumberFormatException();
+                }
+                if ((x > 10 || x < 1) || (y > 10 || y < 1)) {
+                    cells[y][x] = SHIP;
+                } else {
+                    System.out.println("Не корректные координаты! Введите координаты занова");
+                    ship2(cells);
+                }
             }
+        }catch (NumberFormatException e) {
+            System.out.println("Введённый символ не являеся числом! введите координаты как указано в шаблоне");
+            ship2(cells);
         }
         return cells;
     }
     public static Cell[][] ship1(Cell[][] cells){
-        Scanner scanner = new Scanner(System.in);
-        String str = scanner.nextLine();
-        String[] arr1 = str.split(";");
-        for (String arr: arr1){
-            String[] arr2 = arr.split(",");
-            int x = Integer.parseInt(arr2[0]);
-            int y = Integer.parseInt(arr2[1]);
-            if((x > 10 || x < 1) || (y > 10 || y < 1)) {
-                System.out.println("Не корректные координаты! Введите координаты заново");
-                ship1(cells);
-            } else {
-                cells[y][x] = SHIP;
+        try {
+            Scanner scanner = new Scanner(System.in);
+            String str = scanner.nextLine();
+            String[] arr1 = str.split(";");
+            for (String arr : arr1) {
+                String[] arr2 = arr.split(",");
+                int x = Integer.parseInt(arr2[0]);
+                int y = Integer.parseInt(arr2[1]);
+                if ((x != (int) x) || (y != (int) y)) {
+                    throw new NumberFormatException();
+                }
+                if ((x > 10 || x < 1) || (y > 10 || y < 1)) {
+                    System.out.println("Не корректные координаты! Введите координаты заново");
+                    ship1(cells);
+                } else {
+                    cells[y][x] = SHIP;
+                }
             }
+        }catch (NumberFormatException e) {
+            System.out.println("Введённый символ не являеся числом! введите координаты как указано в шаблоне");
+            ship1(cells);
         }
         return cells;
     }
