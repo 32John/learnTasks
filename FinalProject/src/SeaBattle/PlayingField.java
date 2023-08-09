@@ -25,17 +25,27 @@ public class PlayingField {
             String[] arr1 = str.split(";");
             for (String arr : arr1) {
                 String[] arr2 = arr.split(",");
+                if(arr2.length != 2) {
+                    System.out.println("Некорректные координаты! координата состоит из 2х чисел, c запятой." + "\n" +
+                            "Введите координаты заново");
+                    ship4(cells);
+                }
                 int x = Integer.parseInt(arr2[0]);
                 int y = Integer.parseInt(arr2[1]);
                 if ((x != (int) x) || (y != (int) y)){
                     throw new NumberFormatException();
                 }
                 if ((x > 10 || x < 1) || (y > 10 || y < 1)) {
-                    System.out.println("Не корректные координаты! Введите координаты заново");
+                    System.out.println("Не корректные координаты! допустимые числа 0...10. Введите координаты заново");
                     ship4(cells);
-                } else {
+                }
+                else {
                     cells[y][x] = SHIP;
                 }
+            }
+            if (arr1.length != 4) {
+                System.out.println("Корабль должен состоять из 4х клеток! Введите координаты как в шаблоне");
+                ship4(cells);
             }
         } catch (NumberFormatException e) {
             System.out.println("Введённый символ не являеся числом! введите координаты как указано в шаблоне");
@@ -51,6 +61,11 @@ public class PlayingField {
             String[] arr1 = str.split(";");
             for (String arr : arr1) {
                 String[] arr2 = arr.split(",");
+                if(arr2.length != 2) {
+                    System.out.println("Некорректные координаты! координата состоит из 2х чисел, c запятой." + "\n" +
+                            "Введите координаты заново");
+                    ship4(cells);
+                }
                 int x = Integer.parseInt(arr2[0]);
                 int y = Integer.parseInt(arr2[1]);
                 if ((x != (int) x) || (y != (int) y)) {
@@ -62,6 +77,10 @@ public class PlayingField {
                 } else {
                     cells[y][x] = SHIP;
                 }
+            }
+            if (arr1.length != 3) {
+                System.out.println("Корабль должен состоять из 3х клеток! Введите координаты как в шаблоне");
+                ship4(cells);
             }
         }catch (NumberFormatException e) {
             System.out.println("Введённый символ не являеся числом! введите координаты как указано в шаблоне");
@@ -76,6 +95,11 @@ public class PlayingField {
             String[] arr1 = str.split(";");
             for (String arr : arr1) {
                 String[] arr2 = arr.split(",");
+                if(arr2.length != 2) {
+                    System.out.println("Некорректные координаты! координата состоит из 2х чисел, c запятой." + "\n" +
+                            "Введите координаты заново");
+                    ship4(cells);
+                }
                 int x = Integer.parseInt(arr2[0]);
                 int y = Integer.parseInt(arr2[1]);
                 if ((x != (int) x) || (y != (int) y)) {
@@ -83,10 +107,15 @@ public class PlayingField {
                 }
                 if ((x > 10 || x < 1) || (y > 10 || y < 1)) {
                     cells[y][x] = SHIP;
-                } else {
+                }
+                else {
                     System.out.println("Не корректные координаты! Введите координаты занова");
                     ship2(cells);
                 }
+            }
+            if (arr1.length != 2) {
+                System.out.println("Корабль должен состоять из 2х клеток! Введите координаты как в шаблоне");
+                ship2(cells);
             }
         }catch (NumberFormatException e) {
             System.out.println("Введённый символ не являеся числом! введите координаты как указано в шаблоне");
@@ -101,6 +130,11 @@ public class PlayingField {
             String[] arr1 = str.split(";");
             for (String arr : arr1) {
                 String[] arr2 = arr.split(",");
+                if(arr2.length != 2) {
+                    System.out.println("Некорректные координаты! координата состоит из 2х чисел, c запятой." + "\n" +
+                            "Введите координаты заново");
+                    ship4(cells);
+                }
                 int x = Integer.parseInt(arr2[0]);
                 int y = Integer.parseInt(arr2[1]);
                 if ((x != (int) x) || (y != (int) y)) {
@@ -113,6 +147,10 @@ public class PlayingField {
                     cells[y][x] = SHIP;
                 }
             }
+            if (arr1.length != 1) {
+                System.out.println("Корабль должен состоять из 1 клетоки! Введите координаты как в шаблоне");
+                ship1(cells);
+            }
         }catch (NumberFormatException e) {
             System.out.println("Введённый символ не являеся числом! введите координаты как указано в шаблоне");
             ship1(cells);
@@ -120,38 +158,28 @@ public class PlayingField {
         return cells;
     }
     public void allShips(Cell[][] cells){
-        System.out.println("Введите координаты 4х палубного корабля" + "\n" +
-                "формат ввода: x,y;x,y;x,y;x,y");
+        System.out.println("Введите координаты 4х палубного корабля" + "\n" + "формат ввода: x,y;x,y;x,y;x,y");
         ship4(cells);
 
-        System.out.println("Введите координаты 1го 3х палубного корабля" + "\n" +
-                "формат ввода: x,y;x,y;x,y");
+        System.out.println("Введите координаты 1го 3х палубного корабля" + "\n" + "формат ввода: x,y;x,y;x,y");
         ship3(cells);
-        System.out.println("Введите координаты 2го 3х палубного корабля" + "\n" +
-                "формат ввода: x,y;x,y;x,y");
+        System.out.println("Введите координаты 2го 3х палубного корабля" + "\n" + "формат ввода: x,y;x,y;x,y");
         ship3(cells);
 
-        System.out.println("Введите координаты 1го 2х палубного корабля" + "\n" +
-                "формат ввода: x,y;x,y");
+        System.out.println("Введите координаты 1го 2х палубного корабля" + "\n" + "формат ввода: x,y;x,y");
         ship2(cells);
-        System.out.println("Введите координаты 2го 2х палубного корабля" + "\n" +
-                "формат ввода: x,y;x,y");
+        System.out.println("Введите координаты 2го 2х палубного корабля" + "\n" + "формат ввода: x,y;x,y");
         ship2(cells);
-        System.out.println("Введите координаты 3го 2х палубного корабля" + "\n" +
-                "формат ввода: x,y;x,y");
+        System.out.println("Введите координаты 3го 2х палубного корабля" + "\n" + "формат ввода: x,y;x,y");
         ship2(cells);
 
-        System.out.println("Введите координаты 1го 1 палубного корабля" + "\n" +
-                "формат ввода: x,y");
+        System.out.println("Введите координаты 1го 1 палубного корабля" + "\n" + "формат ввода: x,y");
         ship1(cells);
-        System.out.println("Введите координаты 2го 1 палубного корабля" + "\n" +
-                "формат ввода: x,y");
+        System.out.println("Введите координаты 2го 1 палубного корабля" + "\n" + "формат ввода: x,y");
         ship1(cells);
-        System.out.println("Введите координаты 3го 1 палубного корабля" + "\n" +
-                "формат ввода: x,y");
+        System.out.println("Введите координаты 3го 1 палубного корабля" + "\n" + "формат ввода: x,y");
         ship1(cells);
-        System.out.println("Введите координаты 4го 1 палубного корабля" + "\n" +
-                "формат ввода: x,y");
+        System.out.println("Введите координаты 4го 1 палубного корабля" + "\n" + "формат ввода: x,y");
         ship1(cells);
     }
 }
