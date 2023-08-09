@@ -23,7 +23,7 @@ public class Main {
 
         playingField1.print();
         System.out.println();
-        playingField1.test(cell);
+        playingField1.ship4(cell);
 
         playingField1.print();
 
