@@ -54,6 +54,7 @@ public class PlayingField {
         return cells;
     }
     public static Cell[][] ship3(Cell[][] cells){
+
         try {
             Scanner scanner = new Scanner(System.in);
             String str = scanner.nextLine();
@@ -67,10 +68,11 @@ public class PlayingField {
                 }
                 int x = Integer.parseInt(arr2[0]);
                 int y = Integer.parseInt(arr2[1]);
-                if (((x != (int) x) || (y != (int) y))) {
+                if ((x != (int) x) || (y != (int) y)) {
                     throw new NumberFormatException();
                 }
                 else {
+
                     cells[y][x] = SHIP;
                 }
             }
