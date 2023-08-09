@@ -1,31 +1,31 @@
 package SeaBattle;
 
 public enum Cell {
-    EMPTY(" \u2587 "),
-    HALO("□"),
-    SHIP(" \uD83D\uDEE5"),  // символ корабля(юникод)
+    EMPTY("\uD83C\uDFFF"),
+    HALO("\uD83C\uDFFB"),
+    SHIP("\uD83D\uDEE5"),  // символ корабля(юникод)
     PADDED_CELL("✖"),   // подбитая ячейка
-    BEGINNING(" "),
-    X1("  X1 "),
-    X2("X2 "),
-    X3("X3 "),
-    X4("X4 "),
-    X5("X5 "),
-    X6("X6 "),
-    X7("X7 "),
-    X8("X8 "),
-    X9("X9 "),
-    X10("X10"),
-    Y1("Y1 "),
-    Y2("Y2 "),
-    Y3("Y3 "),
-    Y4("Y4 "),
-    Y5("Y5 "),
-    Y6("Y6 "),
-    Y7("Y7 "),
-    Y8("Y8 "),
-    Y9("Y9 "),
-    Y10("Y10");
+    BEGINNING("y⃥x"),
+    X1(" X₁"),
+    X2("X₂"),
+    X3("X₃"),
+    X4("X₄"),
+    X5("X₅"),
+    X6("X₆"),
+    X7("X₇"),
+    X8("X₈"),
+    X9("X₉"),
+    X10("X1₀"),
+    Y1("Y₁ "),
+    Y2("Y₂ "),
+    Y3("Y₃ "),
+    Y4("Y₄ "),
+    Y5("Y₅ "),
+    Y6("Y₆ "),
+    Y7("Y₇ "),
+    Y8("Y₈ "),
+    Y9("Y₉ "),
+    Y10("Y1₀");
 
 
     private String symbol;
