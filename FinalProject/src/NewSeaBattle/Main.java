@@ -1,13 +1,12 @@
-package SeaBattle;
+package NewSeaBattle;
 
-import static SeaBattle.Cell.*;
+import static NewSeaBattle.Cell.*;
+import static NewSeaBattle.Cell.EMPTY;
+import static NewSeaBattle.Ship4.*;
 
 public class Main {
     public static void main(String[] args) {
-        String messages = new String("Введите координаты 4х палубного корабля формат ввода: x,y;x,y;x,y;x,y" + "\n" +
-                "");
-
-        Cell[][] cell = new Cell[][] {
+        Cell[][] cell = new Cell[][]{
                 {BEGINNING, X1, X2, X3, X4, X5, X6, X7, X8, X9, X10},
                 {Y1, EMPTY, EMPTY, EMPTY, EMPTY, EMPTY, EMPTY, EMPTY, EMPTY, EMPTY, EMPTY},
                 {Y2, EMPTY, EMPTY, EMPTY, EMPTY, EMPTY, EMPTY, EMPTY, EMPTY, EMPTY, EMPTY},
@@ -20,13 +19,11 @@ public class Main {
                 {Y9, EMPTY, EMPTY, EMPTY, EMPTY, EMPTY, EMPTY, EMPTY, EMPTY, EMPTY, EMPTY},
                 {Y10, EMPTY, EMPTY, EMPTY, EMPTY, EMPTY, EMPTY, EMPTY, EMPTY, EMPTY, EMPTY}
         };
-        PlayingField playingField1 = new PlayingField(cell);
-        PlayingField playingField2 = new PlayingField(cell);
+        PlayingField playingField = new PlayingField(cell);
+        Ship4 ship4 = new Ship4(cell);
+ //       playingField.print();
+        ship4.creatureShip4(cell);
+        ship4.print();
 
-        playingField1.print();
-        System.out.println();
- //       PlayingField.ship3(cell);
-        playingField1.ship4(cell);
-        playingField1.print();
     }
 }
